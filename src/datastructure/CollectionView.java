@@ -10,6 +10,7 @@ public class CollectionView {
          Retrieve the Collection view of the values present in map
          */
 
+        
         HashMap<Integer, String> map = new HashMap<Integer, String>();
         map.put(1, "NYC");
         map.put(2, "LA");

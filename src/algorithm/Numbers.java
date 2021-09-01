@@ -50,6 +50,7 @@ public class Numbers {
         long mergeSortExecutionTime = algo.executionTime;
         System.out.println("Total Execution Time of " + num.length + " numbers in Merge Sort took: " + mergeSortExecutionTime + " milliseconds");
 
+
         /*
         Can you come to conclusion about which sorting algorithm is most efficient, given the size of the data set?
          */
