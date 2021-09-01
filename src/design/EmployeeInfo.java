@@ -12,7 +12,7 @@ public class EmployeeInfo {
 
     Important: YOU MUST USE:
         - OOP (Abstraction, Encapsulation, Inheritance and Polymorphism) concepts in every level possible.
-        - Use all kind of keywords (super, this, static, final, etc)
+        - Use all kind of keywords (super, this, static, final, etc.)
         - Implement nested class below (DateConversion)
         - Use Exception Handling
      */
@@ -48,8 +48,7 @@ public class EmployeeInfo {
      *
      */
     public static int calculateEmployeeBonus(int numberOfYearsWithCompany) {
-        int total = 0;
-        return total;
+        return 0;
     }
 
     /*
@@ -65,9 +64,9 @@ public class EmployeeInfo {
         System.out.println("Please enter start date in format (example: May,2015): ");
         String joiningDate = sc.nextLine();
         System.out.println("Please enter today's date in format (example: August,2017): ");
-        String todaysDate = sc.nextLine();
+        String todayDate = sc.nextLine();
         String convertedJoiningDate = DateConversion.convertDate(joiningDate);
-        String convertedTodaysDate = DateConversion.convertDate(todaysDate);
+        String convertedTodayDate = DateConversion.convertDate(todayDate);
 
         // Figure out how to extract the number of years the employee has been with the company, using the above 2 dates
         // Calculate pension
@@ -77,22 +76,27 @@ public class EmployeeInfo {
 
     private static class DateConversion {
 
-        public DateConversion(Months months) {
+        public DateConversion() {
         }
 
         public static String convertDate(String date) {
             String[] extractMonth = date.split(",");
             String givenMonth = extractMonth[0];
             int monthDate = whichMonth(givenMonth);
-            String actualDate = monthDate + "/" + extractMonth[1];
-            return actualDate;
+            return monthDate + "/" + extractMonth[1];
         }
 
         public static int whichMonth(String givenMonth) {
             Months months = Months.valueOf(givenMonth);
-            int date = 0;
+            int date;
             switch (months) {
                 case January:
+                case November:
+                case July:
+                case August:
+                case September:
+                case October:
+                case December:
                     date = 1;
                     break;
                 case February:
@@ -109,24 +113,6 @@ public class EmployeeInfo {
                     break;
                 case June:
                     date = 6;
-                    break;
-                case July:
-                    date = 1;
-                    break;
-                case August:
-                    date = 1;
-                    break;
-                case September:
-                    date = 1;
-                    break;
-                case October:
-                    date = 1;
-                    break;
-                case November:
-                    date = 1;
-                    break;
-                case December:
-                    date = 1;
                     break;
                 default:
                     date = 0;
