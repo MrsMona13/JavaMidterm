@@ -27,7 +27,7 @@ Answer: The java life cycle is basically what happens from the beginning of when
         to read the code.
 
 What is a class?
-Answer: A class is basically a blueprint. It also consists of states and behaviors.
+Answer:  A class is basically a blueprint. It also consists of states and behaviors.
 
 What is an object?
 Answer: An object is simply an instance of a class.
